@@ -8,7 +8,12 @@ here We will define a class with abstract methods and concrete methods
     Step 4: Create an object of the subclass and call the methods to demonstrate abstraction.
     Step 5: Run the program to see how abstraction works in Java.
 
-2. Interface
+2. Interface is based on "can do" relationship and abstract class is based on "is a" relationship
+ Step 1: Create a interface using the interface keyword.
+ Step 2: Define abstract methods (methods without a body) in the interface.
+    Step 3: Create a class that implements the interface and provides implementations for the abstract methods. 
+    Step 4: Create an object of the class that implements the interface and call the methods to demonstrate abstraction.
+    Step 5: Run the program to see how abstraction works in Java.
 
 */
 
@@ -65,3 +70,38 @@ Then, we can create specific classes like "Lion", "Elephant", and "Monkey"
 that extend the Animal class and provide their own implementations of the makeSound() method. 
 This way, we can manage different types of animals in the zoo while keeping the common functionalities abstracted in the Animal class.
 */
+
+ class Car {
+    public void start() {
+        System.out.println("Car is starting...");
+    }
+    public void stop() {
+        System.out.println("Car is stopping...");
+    }
+}
+
+// Interface for electric vehicles
+interface ElectricVehicle {
+    void charge();
+    void displayBatteryLevel();
+
+}
+
+class ElectricCar implements ElectricVehicle {
+    public void charge() {
+        System.out.println("Electric car is charging...");
+    }
+    public void displayBatteryLevel() {
+        System.out.println("Battery level: 80%");
+    }
+}
+
+/*
+Developer use case based on abstraction using interfaces (can do relationship) :
+scenario 2: We are developing a software for a transportation system. 
+We can create an interface called "Vehicle" that defines common behaviors of all vehicles, 
+such as start(), stop(), and accelerate(). 
+Then, we can create specific classes like "Car", "Bike", and "Bus" that implement the 
+Vehicle interface and provide their own implementations of the methods.
+
+
